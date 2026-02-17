@@ -25,6 +25,8 @@ function Call_Array() {
 (
     function() {
         const Often_Used_Constant = {
+
+
  'lbAeN': function(Local_i, Local_j) {
      return Local_i === Local_j;
  },
