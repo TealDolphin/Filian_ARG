@@ -1,31 +1,35 @@
-function Char_Swap(Mario, Luigi) {
-    Mario = Mario - 0;
-    const Peach = Call_Array();
-    let Ret_val = Peach[Mario];
-    if (Char_Swap.NNXjAS === undefined) {
+function Char_Swap(num_to_swap, Unused_2nd_var) {
+    num_to_swap = num_to_swap - 0; // ensures it is a number?
+    const Swap_array = Call_Array(); // loads array into the var
+    let Ret_val = Swap_array[num_to_swap]; // loads the value of that location in the array into the variable
+
+    // if this is the first time this function has been called
+    if (Char_Swap.is_loaded === undefined) {
+        // load the lambda function in to the variable, then store the lambda function into the function object
         var Bowser =
         function(Lambda_Input_1) {
             const Alphabet_Replace = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';
-            let Replace_one = '';
-            let Bowser_return = '';
-            for (let DJ_JR = 0, Koopa, Toad, Wario = 0; Toad = Lambda_Input_1.charAt(Wario++); ~Toad && (Koopa = DJ_JR % 4 ? Koopa * 64 + Toad : Toad, DJ_JR++ % 4) ? Replace_one += String.fromCharCode(255 & Koopa >> (-2 * DJ_JR & 6)) : 0) {
+            let character_builder = '';
+            let URL_encoded_element = '';
+            for (let num_i = 0, Koopa, Toad, Wario = 0; Toad = Lambda_Input_1.charAt(Wario++); ~Toad && (Koopa = num_i % 4 ? Koopa * 64 + Toad : Toad, num_i++ % 4) ? character_builder += String.fromCharCode(255 & Koopa >> (-2 * num_i & 6)) : 0) {
                 Toad = Alphabet_Replace.indexOf(Toad);
             }
-            for (let i = 0, k = Replace_one.length; i < k; i++) {
-                Bowser_return += '%' + ('00' + Replace_one.charCodeAt(i).toString(16)).slice(-2);
+            for (let i = 0, k = character_builder.length; i < k; i++) {
+                //builds encoded URL element, list of %XX characters to decode
+                URL_encoded_element += '%' + ('00' + character_builder.charCodeAt(i).toString(16)).slice(-2);
             }
-            return decodeURIComponent(Bowser_return);
+            return decodeURIComponent(URL_encoded_element); // decodes encoded URL information back to plain text
         };
-        Char_Swap.VgjNQZ = Bowser;
-        Char_Swap.jMfiZo = {};
-        Char_Swap.NNXjAS = !![];
+        Char_Swap.lambda_function_on_load = Bowser;
+        Char_Swap.obj = {};
+        Char_Swap.is_loaded = true; // !![] evaluates to true
     }
-    const Const_1 = Peach[0];
-    const Const_2 = Mario + Const_1;
-    const _0x37ef56 = Char_Swap.jMfiZo[Const_2];
+    const Const_1 = Swap_array[0];
+    const Const_2 = num_to_swap + Const_1;
+    const _0x37ef56 = Char_Swap.obj[Const_2];
     if (!_0x37ef56) {
-        Ret_val = Char_Swap.VgjNQZ(Ret_val);
-        Char_Swap.jMfiZo[Const_2] = Ret_val;
+        Ret_val = Char_Swap.lambda_function_on_load(Ret_val);
+        Char_Swap.obj[Const_2] = Ret_val;
     } else {
         Ret_val = _0x37ef56;
     }
@@ -40,8 +44,8 @@ function Call_Array() {
     };
     return Call_Array();
 }(
-    function(_0x507375, _0x585e2c) {
-        const _0x231f6f = _0x507375();
+    function(Mario, _0x585e2c) {
+        const _0x231f6f = Mario();
         while (!![]) {
             try {
                 const _0x392096 = parseInt(Char_Swap(0)) / 1 + -parseInt(Char_Swap(1)) / 2 + parseInt(Char_Swap(2)) / 3 + -parseInt(Char_Swap(3)) / 4 * (parseInt(Char_Swap(4)) / 5) + -parseInt(Char_Swap(5)) / 6 * (-parseInt(Char_Swap(6)) / 7) + parseInt(Char_Swap(7)) / 8 + parseInt(Char_Swap(8)) / 9;
