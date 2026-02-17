@@ -25,9 +25,7 @@ function Call_Array() {
 (
     function() {
         const Often_Used_Constant = {
- 'hvIQn': function(_0x28da7d) {
-     return _0x28da7d();
- },
+
        'LJIMC': function(_0x3e2fa3, _0x197ce0, _0x37898d) {
      return _0x3e2fa3(_0x197ce0, _0x37898d);
  },
@@ -39,9 +37,6 @@ function Call_Array() {
  },
    'RaLUY': function(_0xbf21c9, _0x1cebcd) {
      return _0xbf21c9(_0x1cebcd);
- },
-       'less_than': function(_0x21d52d, _0x420cd1) {
-     return _0x21d52d < _0x420cd1;
  },
   'MXmZb': function(_0x5de0d6) {
      return _0x5de0d6();
@@ -55,9 +50,6 @@ function Call_Array() {
    'kDSup': function(_0x3e8ba8) {
      return _0x3e8ba8();
  },
-   'gAesN': function(_0x2be978, _0xc7b6b, _0x2e081a) {
-     return _0x2be978(_0xc7b6b, _0x2e081a);
- },
      'rauxT': function(_0x549b70, _0x3078c1) {
      return _0x549b70(_0x3078c1);
  },
@@ -69,9 +61,6 @@ function Call_Array() {
  },
   'pkdpu': function(_0x9d19b, _0x3310b9) {
      return _0x9d19b(_0x3310b9);
- },
-   'less_than': function(_0x14d537, _0x5e60f2) {
-     return _0x14d537 < _0x5e60f2;
  },
       'bMcLS': function(_0x34d3f4, _0x5f28f4) {
      return _0x34d3f4(_0x5f28f4);
@@ -87,144 +76,69 @@ function Call_Array() {
         const form_wrapper = document["getElementById"]("terminal-form");
         const input_box = document["getElementById"]("password-input");
         const output_message = document["getElementById"]("output");
-        const _0x323780 = document["getElementById"]("win-modal");
+        const win_modal = document["getElementById"]("win-modal");
         const modal_close_event_listener = document["getElementById"]("modal-close");
-        const _0xe0d348 = document["getElementById"]("noise-canvas");
+        const noise_canvas = document["getElementById"]("noise-canvas");
         const Audio_handler = window['AudioContext'] || window["webkitAudioContext"];
         const Audio_one = new Audio_handler();
-        const _0x46e1ce = Audio_one["createGain"]();
-        _0x46e1ce["gain"]["value"] = 0.5;
-        _0x46e1ce["connect"](Audio_one['destination']);
-        const _0x6cfe00 = Audio_one["sampleRate"];
-        const _0x3d5d88 = Audio_one['createBuffer'](1, _0x6cfe00, Audio_one["sampleRate"]);
-        const _0x2c2f90 = _0x3d5d88["getChannelData"](0);
-        for (let _0x47d4ab = 0; Often_Used_Constant["less_than"](_0x47d4ab, _0x6cfe00); _0x47d4ab++) {
-            if (Often_Used_Constant.EsDtQ === "cxNSW") {
-                if (_0x4574a9["key"] === "Enter") return;
-                Often_Used_Constant["Txhxt"](_0x4c8796);
-            } else {
-                _0x2c2f90[_0x47d4ab] = ((Math["random"]() * 2.0) - 1);
-            }
+        const audio_gain = Audio_one["createGain"]();
+        audio_gain["gain"]["value"] = 0.5;
+        audio_gain["connect"](Audio_one['destination']);
+        const audio_rate = Audio_one["sampleRate"];
+        const audio_buffer_a = Audio_one['createBuffer'](1, audio_rate, Audio_one["sampleRate"]);
+        const audio_buffer_a_data = audio_buffer_a["getChannelData"](0);
+        for (let num_i = 0; num_i < audio_rate; num_i++) {
+                audio_buffer_a_data[num_i] = ((Math["random"]() * 2.0) - 1);
         }
-        let _0x2681f5;
+        let timeout_counter;
 
-        function _0x2f5cec() {
-            const _0x29ae8b = {
-                'oHyxr': function(_0x2f60db, _0x304d15) {
-                    return _0x2f60db === _0x304d15;
-                },
- 'nBSBB': function(_0x2d8a03, _0x167f64) {
-     return _0x2d8a03 === _0x167f64;
- },
- 'JnqFo': "text",
- 'wBmTI': function(_0x30521e, _0x1f5792) {
-     return _0x30521e === _0x1f5792;
- },
- 'fziXE': Often_Used_Constant.GxbLH,
- 'sGYzv': Often_Used_Constant.fzoQD,
- 'MfrZs': "class"
-            };
+        function audio_resume() {
             if (Audio_one["state"] === "suspended") {
-                if ("YjCuU" === Often_Used_Constant.AHnpY){
-                    const _0x579c77 = _0x4d7ff2["querySelector"](_0x2e0a5e['selector']);
-                    if (!_0x579c77) return;
-                    if (_0x29ae8b["nBSBB"](_0x235ad4['action'], _0x29ae8b["JnqFo"])) _0x579c77["innerText"] = _0x7c6ba9["value"];
-                    if (_0x29ae8b["wBmTI"](_0x754375["action"], _0x29ae8b["fziXE"])) _0x579c77["innerHTML"] = _0x50a513["value"];
-                    if (_0x29ae8b["nBSBB"](_0x460155["action"], _0x29ae8b.sGYzv)) _0x579c77["style"][_0x56e139["property"]] = _0x1f23f8["value"];
-                    if (_0x29ae8b["wBmTI"](_0x2f6ba3['action'], _0x29ae8b["MfrZs"])) _0x579c77["classList"].add(_0x47a75e["value"]);
-                } else {
                     Audio_one["resume"]();
-                }
             }
         }
 
-        function _0x5695a3() {
-            const _0x4070a9 = {
-                'CQMQG': function(_0x26add1, _0x281731) {
-                    return Often_Used_Constant["RaLUY"](_0x26add1, _0x281731);
-                },
- 'ffuFo': function(_0x548221, _0x1d29fd) {
-     return _0x548221 + _0x1d29fd;
- },
- 'zAXkY': function(_0x32bb59, _0x49165b) {
-     return _0x32bb59 + _0x49165b;
- },
- 'VccIz': "return\x20(function() ",
- 'wbxzt': "{}.constructor(\"return\x20this\x22)(\x20)",
- 'mlXrI': function(_0x1de749) {
-     return Often_Used_Constant["hvIQn"](_0x1de749);
- },
- 'pAvSr': "log",
- 'mMKrM': "warn",
- 'ePjhU': "info",
- 'phgOf': "error",
- 'jenAx': "exception",
- 'wGrtt': "table",
- 'lZDMx': "trace",
- 'UiRcB': function(_0x564dba, _0x167c5e) {
-     return Often_Used_Constant["less_than"](_0x564dba, _0x167c5e);
- }
-            };
-            if ("nWlrg" === "nWlrg") {
-                Often_Used_Constant["hvIQn"](_0x2f5cec);
-                const _0x59d357 = Audio_one["currentTime"];
-                const _0x30a91a = Audio_one["createBufferSource"]();
-                _0x30a91a['buffer'] = _0x3d5d88;
-                const _0x3c35bb = Audio_one["createBiquadFilter"]();
-                _0x3c35bb["type"] = "highpass";
-                _0x3c35bb["frequency"].value = 2000;
-                const _0x210600 = Audio_one["createGain"]();
-                _0x210600["gain"]["setValueAtTime"](0, _0x59d357);
-                _0x210600["gain"]["linearRampToValueAtTime"](1, _0x59d357 + 0.001);
-                _0x210600["gain"]["exponentialRampToValueAtTime"](0.01, _0x59d357 + 0.03);
-                _0x30a91a['connect'](_0x3c35bb);
-                _0x3c35bb['connect'](_0x210600);
-                _0x210600['connect'](_0x46e1ce);
-                const _0x2ba454 = Math["random"]() * 0.5;
-                _0x30a91a["start"](_0x59d357, _0x2ba454);
-                _0x30a91a["stop"](_0x59d357 + 0.03);
-                const _0x257829 = Audio_one['createBufferSource']();
-                _0x257829["buffer"] = _0x3d5d88;
-                const _0xd7ce6f = Audio_one["createBiquadFilter"]();
-                _0xd7ce6f.type = "lowpass";
-                _0xd7ce6f["frequency"]["value"] = 600;
-                const _0x26770e = Audio_one['createGain']();
-                _0x26770e["gain"]["setValueAtTime"](0, _0x59d357);
-                _0x26770e["gain"]['linearRampToValueAtTime'](0.6, _0x59d357 + 0.001);
-                _0x26770e["gain"]["exponentialRampToValueAtTime"](0.01, _0x59d357 + 0.08);
-                _0x257829["connect"](_0xd7ce6f);
-                _0xd7ce6f["connect"](_0x26770e);
-                _0x26770e["connect"](_0x46e1ce);
-                _0x257829["start"](_0x59d357, _0x2ba454);
-                _0x257829["stop"](_0x59d357 + 0.08);
-            } else {
-                let _0x4c1e73;
-                try {
-                    const _0x10083d = HAvOXG.CQMQG(_0x33dd47, HAvOXG["ffuFo"](HAvOXG.zAXkY(HAvOXG["VccIz"], HAvOXG["wbxzt"]), ');'));
-                    _0x4c1e73 = HAvOXG["mlXrI"](_0x10083d);
-                } catch (_0x3c257e) {
-                    _0x4c1e73 = _0x26745c;
-                }
-                const _0x545d4b = _0x4c1e73["console"] = _0x4c1e73["console"] || {};
-                const _0x4c4d21 = [HAvOXG["pAvSr"], HAvOXG["mMKrM"], HAvOXG.ePjhU, HAvOXG["phgOf"], HAvOXG.jenAx, HAvOXG["wGrtt"], HAvOXG.lZDMx];
-                for (let _0x4f1474 = 0; HAvOXG["UiRcB"](_0x4f1474, _0x4c4d21["length"]); _0x4f1474++) {
-                    const _0x1d95f5 = _0x220de7['constructor']["prototype"]["bind"](_0x39e9be);
-                    const _0xab83ee = _0x4c4d21[_0x4f1474];
-                    const _0x2da48b = _0x545d4b[_0xab83ee] || _0x1d95f5;
-                    _0x1d95f5["__proto__"] = _0x9c463b["bind"](_0x12af6e);
-                    _0x1d95f5['toString'] = _0x2da48b["toString"]["bind"](_0x2da48b);
-                    _0x545d4b[_0xab83ee] = _0x1d95f5;
-                }
-            }
+        function audio_sound_one() {
+                audio_resume();
+                const audio_timer_a = Audio_one["currentTime"];
+                const audio_buffer_a = Audio_one["createBufferSource"]();
+                audio_buffer_a['buffer'] = audio_buffer_a;
+                const audio_biquad_filter = Audio_one["createBiquadFilter"]();
+                audio_biquad_filter["type"] = "highpass";
+                audio_biquad_filter["frequency"].value = 2000;
+                const audio_gain_value = Audio_one["createGain"]();
+                audio_gain_value["gain"]["setValueAtTime"](0, audio_timer_a);
+                audio_gain_value["gain"]["linearRampToValueAtTime"](1, audio_timer_a + 0.001);
+                audio_gain_value["gain"]["exponentialRampToValueAtTime"](0.01, audio_timer_a + 0.03);
+                audio_buffer_a['connect'](audio_biquad_filter);
+                audio_biquad_filter['connect'](audio_gain_value);
+                audio_gain_value['connect'](audio_gain);
+                const audio_random_length = Math["random"]() * 0.5;
+                audio_buffer_a["start"](audio_timer_a, audio_random_length);
+                audio_buffer_a["stop"](audio_timer_a + 0.03);
+                const audio_buffer_b = Audio_one['createBufferSource']();
+                audio_buffer_b["buffer"] = audio_buffer_a;
+                const audio_biquad_two = Audio_one["createBiquadFilter"]();
+                audio_biquad_two.type = "lowpass";
+                audio_biquad_two["frequency"]["value"] = 600;
+                const audio_gain_two = Audio_one['createGain']();
+                audio_gain_two["gain"]["setValueAtTime"](0, audio_timer_a);
+                audio_gain_two["gain"]['linearRampToValueAtTime'](0.6, audio_timer_a + 0.001);
+                audio_gain_two["gain"]["exponentialRampToValueAtTime"](0.01, audio_timer_a + 0.08);
+                audio_buffer_b["connect"](audio_biquad_two);
+                audio_biquad_two["connect"](audio_gain_two);
+                audio_gain_two["connect"](audio_gain);
+                audio_buffer_b["start"](audio_timer_a, audio_random_length);
+                audio_buffer_b["stop"](audio_timer_a + 0.08);
         }
 
-        function _0x5938a3() {
-            Often_Used_Constant["MXmZb"](_0x2f5cec);
+        function audio_sound_two() {
+            audio_resume();
             const _0x270c37 = Audio_one['currentTime'];
             const _0x1f3957 = Audio_one['createOscillator']();
             const _0x343251 = Audio_one["createGain"]();
             _0x1f3957["connect"](_0x343251);
-            _0x343251["connect"](_0x46e1ce);
+            _0x343251["connect"](audio_gain);
             _0x1f3957.type = "sawtooth";
             _0x1f3957['frequency']["setValueAtTime"](110, _0x270c37);
             _0x1f3957['frequency']["linearRampToValueAtTime"](50, _0x270c37 + 0.3);
@@ -233,7 +147,7 @@ function Call_Array() {
             _0x1f3957["start"](_0x270c37);
             _0x1f3957["stop"](_0x270c37 + 0.3);
         }
-        const _0x48437e = _0xe0d348["getContext"]('2d');
+        const _0x48437e = noise_canvas["getContext"]('2d');
         const _0x14f620 = () => {
             const _0x4cb9e4 = {
                 'YlIwZ': function(_0x59cb7f, _0x2b502d) {
@@ -243,8 +157,8 @@ function Call_Array() {
                     return _0x19f640 * _0x3bd59c;
                 }
             };
-                _0xe0d348.width = window["innerWidth"]/4;
-                _0xe0d348["height"] = window["innerHeight"]/4;
+                noise_canvas.width = window["innerWidth"]/4;
+                noise_canvas["height"] = window["innerHeight"]/4;
         };
         Often_Used_Constant.Txhxt(_0x14f620);
         window["addEventListener"]("resize", _0x14f620);
@@ -257,7 +171,7 @@ function Call_Array() {
  },
  'lcyFU': Often_Used_Constant.MOiVy
             };
-                const _0x29bbf5 = Often_Used_Constant["gAesN"](_0xe5e83e, this,
+                const _0x29bbf5 = _0xe5e83e(this,
         function() {
             const _0x1be90c = {
                 'EtWlI': function(_0x16eaeb) {
@@ -282,67 +196,31 @@ function Call_Array() {
         }
             };
                 let _0x3cb35d;
-                try {
-                    if ("oRMFF" !== Often_Used_Constant.yeqNo)) {
-                        const _0x431a40 = Often_Used_Constant.qoQWq(Function, ("return\x20(function() " + "{}.constructor(\"return\x20this\x22)(\x20)" + ');'));
-                        _0x3cb35d = Often_Used_Constant["elRVX"](_0x431a40);
-                    } else {
-                        _0x1be90c["EtWlI"](_0x36d5f2);
-                        const _0x5c7aba = _0x5b481f["currentTime"];
-                        const _0x34632c = _0x32cc76['createOscillator']();
-                        const _0x210df4 = _0x14c1e7["createGain"]();
-                        _0x34632c["connect"](_0x210df4);
-                        _0x210df4["connect"](_0x2f36ba);
-                        _0x34632c["type"] = "sawtooth";
-                        _0x34632c["frequency"]["setValueAtTime"](110, _0x5c7aba);
-                        _0x34632c['frequency']["linearRampToValueAtTime"](50, _0x1be90c.jkNxh(_0x5c7aba, 0.3));
-                        _0x210df4.gain["setValueAtTime"](0.5, _0x5c7aba);
-                        _0x210df4.gain["exponentialRampToValueAtTime"](0.01, _0x1be90c.GmNva(_0x5c7aba, 0.3));
-                        _0x34632c["start"](_0x5c7aba);
-                        _0x34632c["stop"](_0x1be90c["rKbst"](_0x5c7aba, 0.3));
-                    }
-                } catch (_0x257c23) {
-                        _0x3cb35d = window;
-
-                }
+                _0x3cb35d = window;
                 const _0x38fb0b = _0x3cb35d["console"] = _0x3cb35d["console'] || {};
                 const _0x12657e = ["log", "warn", "info", "error", "exception", "table", "trace"];
-                for (let _0x2bc082 = 0; Often_Used_Constant["less_than"](_0x2bc082, _0x12657e['length']); _0x2bc082++) {
-                    if (Often_Used_Constant.TwAps !== "NPPuH") {
-                        const _0x5df51e = _0xe5e83e["constructor"]['prototype']["bind"](_0xe5e83e);
-                        const _0x2dc85e = _0x12657e[_0x2bc082];
-                        const _0x37d78d = _0x38fb0b[_0x2dc85e] || _0x5df51e;
-                        _0x5df51e['__proto__'] = _0xe5e83e.bind(_0xe5e83e);
-                        _0x5df51e['toString'] = _0x37d78d["toString"].bind(_0x37d78d);
-                        _0x38fb0b[_0x2dc85e] = _0x5df51e;
-                    } else {
-                        _0x26ea67["resume"]();
-                    }
+                for (let num_i = 0; num_i < _0x12657e['length']; num_i++) {
+                    const _0x5df51e = _0xe5e83e["constructor"]['prototype']["bind"](_0xe5e83e);
+                    const _0x2dc85e = _0x12657e[num_i];
+                    const _0x37d78d = _0x38fb0b[_0x2dc85e] || _0x5df51e;
+                    _0x5df51e['__proto__'] = _0xe5e83e.bind(_0xe5e83e);
+                    _0x5df51e['toString'] = _0x37d78d["toString"].bind(_0x37d78d);
+                    _0x38fb0b[_0x2dc85e] = _0x5df51e;
                 }
 
         });
                 Often_Used_Constant["kDSup"](_0x29bbf5);
-                const _0x34eef3 = _0xe0d348.width;
-                const _0x56e4a6 = _0xe0d348["height'];
-                const _0x277b12 = _0x48437e["createImageData"](_0x34eef3, _0x56e4a6);
-                const _0xe3bebe = new Uint32Array(_0x277b12["data"]['buffer']);
-                const _0x19381a = _0xe3bebe["length"];
-                for (let _0x195ce5 = 0; Often_Used_Constant.less_than(_0x195ce5, _0x19381a); _0x195ce5++) {
-                    if (Often_Used_Constant.uMyUc === "FsRbQ") {
-                        _0x16ea4e["width"] = _0x60fcd8["innerWidth"]/4;
-                        _0x375690["height"] = _0x558169["innerHeight"]/4;
-                    } else {
-                        if (Often_Used_Constant["less_than"](Math["random"](), 0.1)) {
-                            if (Often_Used_Constant.HLCVE !== "RDOCl") {
-                                _0xe3bebe[_0x195ce5] = 4294967295;
-                            } else {
-                                _0x18c195["body"]["classList"]["add"]("shake");
-                                Often_Used_Constant.ypxuP(_0x54b0e8, () => _0x4b996d["body"]["classList"]["remove"]("shake"), 500);
-                            }
+                const _0x34eef3 = noise_canvas.width;
+                const _0x56e4a6 = noise_canvas["height'];
+                const image_1 = _0x48437e["createImageData"](_0x34eef3, _0x56e4a6);
+                const image_data = new Uint32Array(image_1["data"]['buffer']);
+                const len = image_data["length"];
+                for (let num_i = 0; num_i < len; num_i++) {
+                        if (Math["random"]() < 0.1)) {
+                            image_data[num_i] = 4294967295;
                         }
-                    }
                 }
-                _0x48437e["putImageData"](_0x277b12, 0, 0);
+                _0x48437e["putImageData"](image_1, 0, 0);
                 Often_Used_Constant["rauxT"](requestAnimationFrame, _0x235266);
         }
         Often_Used_Constant["fRbov"](_0x235266);
@@ -372,12 +250,12 @@ function Call_Array() {
          if (_0x2a3330["color"]) output_message["style"]["color"] = _0x2a3330["color"];
  },
  "PLAY_SOUND": _0x5b5227 => {
-         if (_0x5b5227["val"] === "error") Often_Used_Constant["lLvZL"](_0x5938a3);
-         if (_0x5b5227["val"] === "click") Often_Used_Constant["elRVX"](_0x5695a3);
+         if (_0x5b5227["val"] === "error") Often_Used_Constant["lLvZL"](audio_sound_two);
+         if (_0x5b5227["val"] === "click") Often_Used_Constant["elRVX"](audio_sound_one);
  },
  "SHAKE": () => {
          document["body"]["classList"]["add"](Often_Used_Constant.DhWWI);
-         Often_Used_Constant["gAesN"](setTimeout, () => document["body"]["classList"]["remove"]("shake"), 500);
+         setTimeout() => document["body"]["classList"]["remove"]("shake"), 500);
  },
  "INJECT": _0x580a12 => {
          const _0x42d607 = document["createElement"]("div");
@@ -431,51 +309,43 @@ function Call_Array() {
         };
         async
 
-        function _0x48b473(_0x1cda23) {
-            if ("HEnGP" === Often_Used_Constant.nxBuA) {
-                for (const _0x446480 of _0x1cda23) {
-                        const _0x2f77de = _0x2bbad2[_0x446480.op];
-                        if (_0x2f77de) await Often_Used_Constant["pkdpu"](_0x2f77de, _0x446480);
-                }
-            } else {
-                _0x356085["innerText"] = _0x2a6f69["val"];
-                if (_0x5c68ba["color"]) _0x2cc141["style"]["color"] = _0x32adfc["color"];
+        function message_received(msg_val) {
+            for (const _0x446480 of msg_val) {
+                    const _0x2f77de = _0x2bbad2[_0x446480.op];
+                    if (_0x2f77de) await _0x2f77de(_0x446480);
             }
         }
         async
 
-        function _0x2c53c5(_0x4ff996) {
-            const _0x2ef44d = {
-                "OyvGz": Often_Used_Constant.zLLeU
-            };
-            if (!_0x4ff996) return;
+        function send_to_api(message) {
+            if (!message) return;
             output_message["innerText"] = "TRANSMITTING...";
-            output_message.style["color"] = Often_Used_Constant.wASMU;
+            output_message.style["color"] = "yellow";
             try {
-                    const _0x214c79 = await Often_Used_Constant.gAesN(fetch, "/api/verify", {
+                    const post_call = await fetch("/api/verify", {
                         "method": "POST",
                                                             "headers": {
                                                                 "Content-Type": "application/json"
                                                             },
                                                             "body": JSON["stringify"]({
-                                                                "code": _0x4ff996
+                                                                "code": message
                                                             })
                     });
-                    const _0x501c5c = await _0x214c79["json"]();
-                    if (_0x501c5c["sequence"]) {
-                        await Often_Used_Constant["pkdpu"](_0x48b473, _0x501c5c["sequence"]);
+                    const msg = await post_call["json"]();
+                    if (msg["sequence"]) {
+                        await message_received(msg["sequence"]);
                     }
-            } catch (_0x3909b9) {
-                Often_Used_Constant.hvIQn(_0x5938a3);
+            } catch (err) {
+                audio_sound_two();
                 output_message["innerText"] = Often_Used_Constant.failure_message;
                 output_message["style"].color = Often_Used_Constant.failure_color;
                 document["body"]["classList"]["add"]("shake");
-                Often_Used_Constant.ypxuP(setTimeout, () => document["body"]["classList"]["remove"]("shake"), 500);
-                if (_0x2681f5) Often_Used_Constant["bMcLS"](clearTimeout, _0x2681f5);
-                _0x2681f5 = Often_Used_Constant["LJIMC"](setTimeout, () => {
+                setTimeout() => document["body"]["classList"]["remove"]("shake"), 500);
+                if (timeout_counter) clearTimeout(timeout_counter);
+                timeout_counter = setTimeout() => {
                     const _0x375d77 = {
                         "tpiXo": function(_0x41d888, _0x397aca) {
-                            return Often_Used_Constant["less_than"](_0x41d888, _0x397aca);
+                            return _0x41d888 < _0x397aca;
                         }
                     };
                         output_message["innerText"] = "SYSTEM READY. AWAITING INPUT...";
@@ -485,22 +355,22 @@ function Call_Array() {
         }
         input_box["addEventListener"](Often_Used_Constant.Qjvmr, Text_box_input_event => {
             if (Text_box_input_event.key === "Enter") return;
-            Often_Used_Constant["Txhxt"](_0x5695a3);
+            Often_Used_Constant["Txhxt"](audio_sound_one);
         });
         form_wrapper["addEventListener"]("submit", Text_box_enter_event => {
             Text_box_enter_event["preventDefault"]();
-            const _0x3504ac = input_box["value"]["trim"]();
-            if (_0x2681f5) Often_Used_Constant.qoQWq(clearTimeout, _0x2681f5);
-            Often_Used_Constant["DcGGJ"](_0x2c53c5, _0x3504ac);
+            const send = input_box["value"]["trim"]();
+            if (timeout_counter) clearTimeout(timeout_counter);
+            send_to_api(send);
         });
         document["addEventListener"]("click", _0x193b1d => {
             if (_0x193b1d["target"]["closest"]("#ui_root") || _0x193b1d["target"]["closest"]("._sys_w")) return;
             input_box["focus"]();
-            Often_Used_Constant["kDSup"](_0x2f5cec);
+            Often_Used_Constant["kDSup"](audio_resume);
         });
         if (modal_close_event_listener) {
             modal_close_event_listener["addEventListener"]("click", () => {
-                _0x323780["style"]["display"] = "none";
+                win_modal["style"]["display"] = "none";
                 input_box.focus();
             });
         }
