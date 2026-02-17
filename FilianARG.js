@@ -11,13 +11,64 @@ function Char_Swap(num_to_swap, Unused_2nd_var) {
             const Alphabet_Replace = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';
             let character_builder = '';
             let URL_encoded_element = '';
-            for (let num_i = 0, Koopa, Toad, Wario = 0; Toad = Lambda_Input_1.charAt(Wario++); ~Toad && (Koopa = num_i % 4 ? Koopa * 64 + Toad : Toad, num_i++ % 4) ? character_builder += String.fromCharCode(255 & Koopa >> (-2 * num_i & 6)) : 0) {
-                Toad = Alphabet_Replace.indexOf(Toad);
+            /*
+
+            // For Loop rebuild for readability
+
+            let num_i = 0
+            let Koopa
+            let char_a
+            let num_j = 0
+
+            while (num_j < Lambda_Input_1.length){
+                char_a = Lambda_Input_1.charAt(num_j++)
+                //true && "operator"
+                // returns "operator"
+                //bitwise not on single character seems to return -1, which evaluates to true: ~char_a
+
+                //(Koopa = num_i % 4 ? Koopa * 64 + char_a : char_a, num_i++ % 4) ? character_builder += String.fromCharCode(255 & Koopa >> (-2 * num_i & 6)) : 0
+                // JS compact if:else is the ? operator
+
+                let new_test;
+
+                if(num_i % 4){
+                    Koopa = Koopa * 64 + char_a
+                }else{
+                    Koopa = char_a
+
+                }
+
             }
+
+            // Lambda_Input_1 needs to be a string to be itterated through based on the num_j counter
+            //
+
+
+
+
+            */
+            for (let num_i = 0, Koopa, char_a, num_j = 0; char_a = Lambda_Input_1.charAt(num_j++); ~char_a && (Koopa = num_i % 4 ? Koopa * 64 + char_a : char_a, num_i++ % 4) ? character_builder += String.fromCharCode(255 & Koopa >> (-2 * num_i & 6)) : 0) {
+                char_a = Alphabet_Replace.indexOf(char_a);
+            }
+
+
+
+
+
+
+
+
             for (let i = 0, k = character_builder.length; i < k; i++) {
                 //builds encoded URL element, list of %XX characters to decode
                 URL_encoded_element += '%' + ('00' + character_builder.charCodeAt(i).toString(16)).slice(-2);
             }
+
+
+
+
+
+
+
             return decodeURIComponent(URL_encoded_element); // decodes encoded URL information back to plain text
         };
         Char_Swap.lambda_function_on_load = Bowser;
@@ -26,12 +77,12 @@ function Char_Swap(num_to_swap, Unused_2nd_var) {
     }
     const Const_1 = Swap_array[0];
     const Const_2 = num_to_swap + Const_1;
-    const _0x37ef56 = Char_Swap.obj[Const_2];
-    if (!_0x37ef56) {
+    const Is_empty = Char_Swap.obj[Const_2];
+    if (!Is_empty) {
         Ret_val = Char_Swap.lambda_function_on_load(Ret_val);
         Char_Swap.obj[Const_2] = Ret_val;
     } else {
-        Ret_val = _0x37ef56;
+        Ret_val = Is_empty;
     }
     return Ret_val;
 }
@@ -44,12 +95,12 @@ function Call_Array() {
     };
     return Call_Array();
 }(
-    function(Mario, _0x585e2c) {
+    function(Mario, Luigi_identity) {
         const _0x231f6f = Mario();
         while (!![]) {
             try {
                 const _0x392096 = parseInt(Char_Swap(0)) / 1 + -parseInt(Char_Swap(1)) / 2 + parseInt(Char_Swap(2)) / 3 + -parseInt(Char_Swap(3)) / 4 * (parseInt(Char_Swap(4)) / 5) + -parseInt(Char_Swap(5)) / 6 * (-parseInt(Char_Swap(6)) / 7) + parseInt(Char_Swap(7)) / 8 + parseInt(Char_Swap(8)) / 9;
-                if (_0x392096 === _0x585e2c) {
+                if (_0x392096 === Luigi_identity) {
                     break;
                 } else {
                     _0x231f6f.push(_0x231f6f.shift());
