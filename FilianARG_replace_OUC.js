@@ -224,7 +224,7 @@ function Call_Array() {
                 Often_Used_Constant["rauxT"](requestAnimationFrame, _0x235266);
         }
         Often_Used_Constant["fRbov"](_0x235266);
-        const _0x2bbad2 = {
+        const command = {
             "WAIT": _0x3a3719 => new Promise(_0x1759e7 => setTimeout(_0x1759e7, _0x3a3719.val)),
  "CLEAR_INPUT": () => {
          input_box["value"] = "";
@@ -310,9 +310,9 @@ function Call_Array() {
         async
 
         function message_received(msg_val) {
-            for (const _0x446480 of msg_val) {
-                    const _0x2f77de = _0x2bbad2[_0x446480.op];
-                    if (_0x2f77de) await _0x2f77de(_0x446480);
+            for (const element_e of msg_val) {
+                    const effect = command[element_e.op];
+                    if (effect) await effect(element_e);
             }
         }
         async
